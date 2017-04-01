@@ -27,6 +27,15 @@ xsi:schemaLocation="
 <!-- 配置会话工厂 -->
 <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
 	<property name="dataSource" ref="dataSource"></property><!-- 设置数据源 -->
+	<property name="mappingResources"><!-- 接管对象映射文件 -->
+		<list>
+			<value>com/library/domain/Admin.hbm.xml</value>
+			<value>com/library/domain/Bookinfo.hbm.xml</value>
+			<value>com/library/domain/Booktypeinfo.hbm.xml</value>
+			<value>com/library/domain/Borrowinfo.hbm.xml</value>
+			<value>com/library/domain/Student.hbm.xml</value>
+		</list>
+	</property>
 	<property name="hibernateProperties"><!-- hibernate参数设置 -->
 		<value>
 				hibernate.dialect=org.hibernate.dialect.MySQLDialect
@@ -39,4 +48,10 @@ xsi:schemaLocation="
 </bean>
 <tx:annotation-driven transaction-manager="txManager"/>
 <bean id="test" class="com.library.test.test"></bean>
+<bean id="studentService" class="com.library.imp.StudentService">
+	<property name="sessionfsFactory" ref="sessionFactory"></property>
+</bean>
+<bean name="/login" scope="prototype" class="com.library.actions.loginAction">
+	<property name="ss" ref="studentService"></property>
+</bean>
 </beans>

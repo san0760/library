@@ -22,7 +22,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   </head>
   
-  <body>
-	
-  </body>
+  <body><center>
+	<form method="post" action="/library/login.do?flag=login">
+		学号(例：160101):<input type="text" name="id"/><br>
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    	<input type="password" name="password"/><br>
+    	<input type="submit" value="login"/>
+	</form>
+  </center></body>
 </html>

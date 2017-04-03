@@ -54,4 +54,10 @@ xsi:schemaLocation="
 <bean name="/login" scope="prototype" class="com.library.actions.loginAction">
 	<property name="ss" ref="studentService"></property>
 </bean>
+<bean name="/jumpPage" scope="prototype" class="com.library.actions.jumpPageAction">
+	<property name="ss" ref="studentService"></property>
+</bean>
+<bean name="/book" scope="prototype" class="com.library.actions.bookAction">
+	
+</bean>
 </beans>

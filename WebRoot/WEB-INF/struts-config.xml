@@ -11,6 +11,13 @@
 			<forward name="ok" path="/WEB-INF/s-main.jsp"></forward>
 			<forward name="err" path="/WEB-INF/login.jsp"></forward>
 		</action>
+		<action path="/jumpPage" parameter="flag" type="com.library.actions.jumpPageAction">
+			<forward name="go" path="/WEB-INF/bookBorrowed.jsp"></forward>
+			<forward name="goUser" path="/WEB-INF/s-main.jsp"></forward>
+		</action>
+		<action path="/book" parameter="flag" type="com.library.actions.bookAction">
+			
+		</action>
 	</action-mappings>
 	<controller>
 		<set-property property="processorClass" value="org.springframework.web.struts.DelegatingRequestProcessor"/>

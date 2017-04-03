@@ -29,9 +29,17 @@ public class loginAction extends DispatchAction
 		s.setPassword(loginForm.getPassword());
 		s=ss.checkStudent(s);
 		if(s!=null){
+			arg2.getSession().setAttribute("student",ss.findById(Student.class, s.getStudentId()));
 			return arg0.findForward("ok");
 		}else{
 			return arg0.findForward("err");
 		}
+	}
+	
+	public ActionForward logout(ActionMapping arg0, ActionForm arg1,
+			HttpServletRequest arg2, HttpServletResponse arg3) throws Exception {
+		// TODO Auto-generated method stub
+		arg2.getSession().invalidate();
+		return arg0.findForward("err");
 	}
 }

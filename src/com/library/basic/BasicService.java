@@ -1,5 +1,6 @@
 package com.library.basic;
 
+import java.io.Serializable;
 import java.util.List;
 
 import org.hibernate.Query;
@@ -21,4 +22,8 @@ public abstract class BasicService implements BasicServiceInter
 		}
 		return query.list();
 	}
+	public Object findById(Class clazz,Serializable id){
+		return sessionfsFactory.getCurrentSession().get(clazz, id);
+	}
+	
 }

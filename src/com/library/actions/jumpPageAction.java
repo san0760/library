@@ -9,11 +9,11 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.actions.DispatchAction;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.library.domain.Borrowinfo;
 import com.library.domain.Student;
 import com.library.interfaces.StudentServiceInter;
-
 public class jumpPageAction extends DispatchAction {
 	
 	private StudentServiceInter ss;

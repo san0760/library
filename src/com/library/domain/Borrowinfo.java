@@ -18,6 +18,7 @@ public class Borrowinfo implements java.io.Serializable
 	private Integer isReturn;
 	private Timestamp outTime;
 	private Timestamp returnTime;
+	private Integer conNum;
 
 	// Constructors
 
@@ -119,4 +120,14 @@ public class Borrowinfo implements java.io.Serializable
 		this.returnTime = returnTime;
 	}
 
+	public Integer getConNum()
+	{
+		return conNum;
+	}
+
+	public void setConNum(Integer conNum)
+	{
+		this.conNum = conNum;
+	}
+	
 }

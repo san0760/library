@@ -7,11 +7,11 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.actions.DispatchAction;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.library.domain.Student;
 import com.library.forms.LoginForm;
 import com.library.interfaces.StudentServiceInter;
-
 public class loginAction extends DispatchAction
 {
 	private StudentServiceInter ss;

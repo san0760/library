@@ -28,5 +28,8 @@
         <property name="returnTime" type="java.sql.Timestamp">
             <column name="returnTime" length="19" />
         </property>
+        <property name="conNum" type="java.lang.Integer">
+            <column name="conNum"/>
+        </property>
     </class>
 </hibernate-mapping>

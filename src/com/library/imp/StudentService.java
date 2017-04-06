@@ -2,10 +2,12 @@ package com.library.imp;
 
 import java.util.List;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import com.library.basic.BasicService;
+import com.library.domain.Borrowinfo;
 import com.library.domain.Student;
 import com.library.interfaces.StudentServiceInter;
-
 public class StudentService extends BasicService implements StudentServiceInter
 {
 
@@ -23,4 +25,13 @@ public class StudentService extends BasicService implements StudentServiceInter
 		}
 	}
 
+	@Override
+	public int getConBook(int opId)
+	{
+		// TODO Auto-generated method stub
+		String hql="select conNum from Borrowinfo where opId=?";
+		Object []parameters={opId};
+		return (Integer) uniqueQuery(hql, parameters);
+	}
+	
 }

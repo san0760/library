@@ -42,7 +42,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			Borrowinfo bi=(Borrowinfo)l.get(i);
 		 %>
 		 <tr align="center"><td><%=sdf.format(bi.getReturnTime()) %></td><td><%=bi.getBookinfo().getName() %></td><td><%=bi.getBookinfo().getBooktypeinfo().getTypeName() %></td><td><%=sdf.format(bi.getOutTime()) %></td>
-		 <td><a href="#">续借</a></td></tr>
+		 <td><a href="/library/book.do?flag=conBook&opId=<%=bi.getOpId() %>">续借</a></td></tr>
 		 <%} %>
 	</table>
   </body>

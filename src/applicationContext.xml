@@ -60,4 +60,7 @@ xsi:schemaLocation="
 <bean name="/book" scope="prototype" class="com.library.actions.bookAction">
 	<property name="ss" ref="studentService"></property>
 </bean>
+<bean name="/student" scope="prototype" class="com.library.actions.studentAction">
+	<property name="ss" ref="studentService"></property>
+</bean>
 </beans>

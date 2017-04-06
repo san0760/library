@@ -38,4 +38,9 @@ public class jumpPageAction extends DispatchAction {
 		// TODO Auto-generated method stub
 		return arg0.findForward("goUser");
 	}
+	public ActionForward goEdit(ActionMapping arg0, ActionForm arg1,
+			HttpServletRequest arg2, HttpServletResponse arg3) throws Exception {
+		// TODO Auto-generated method stub
+		return arg0.findForward("goEdit");
+	}
 }

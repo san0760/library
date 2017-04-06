@@ -34,7 +34,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	<table width="100%"><tr><td width="33%">个人信息&nbsp;&nbsp;|&nbsp;&nbsp;欢迎你：${student.name}</td><td width="33%"></td><td width="33%" align="right">今天是：<%=sdf.format(d) %>
   	<a href="/library/login.do?flag=logout">退出</a></td></tr></table>
     <hr>
-    <a href="/library/jumpPage.do?flag=goUser">个人信息</a>&nbsp;&nbsp;&nbsp;<a href="/library/jumpPage.do?flag=goToBookBorrowed">当前借阅情况</a><hr>
+    <a href="/library/jumpPage.do?flag=goUser">个人信息</a>&nbsp;&nbsp;&nbsp;<a href="/library/jumpPage.do?flag=goToBookBorrowed">当前借阅情况</a>&nbsp;&nbsp;&nbsp;<a href="/library/jumpPage.do?flag=goEdit">修改个人信息</a><hr>
     学号：${student.studentId}<br>
     姓名：${student.name}<br>
     性别：${student.sex}<br>

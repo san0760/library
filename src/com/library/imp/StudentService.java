@@ -33,5 +33,15 @@ public class StudentService extends BasicService implements StudentServiceInter
 		Object []parameters={opId};
 		return (Integer) uniqueQuery(hql, parameters);
 	}
+	public void editPassword(int studentId,String password){
+		String hql="update Student set password=? where studentId=?";
+		Object []parameters={password,studentId};
+		excuteUpdate(hql, parameters);
+	}
+	public void editEmail(int studentId,String email){
+		String hql="update Student set email=? where studentId=?";
+		Object []parameters={email,studentId};
+		excuteUpdate(hql, parameters);
+	}
 	
 }

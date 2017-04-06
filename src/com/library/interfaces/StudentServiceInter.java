@@ -10,4 +10,6 @@ public interface StudentServiceInter extends BasicServiceInter
 {
 	public Student checkStudent(Student student);
 	public int getConBook(int opid);
+	public void editPassword(int studentId,String password);
+	public void editEmail(int studentId,String email);
 }

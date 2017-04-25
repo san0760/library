@@ -23,6 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-   	 操作成功
+   	 操作成功<br>
+   	 <a href="/library/jumpPage.do?flag=goUser">返回个人信息页</a>
   </body>
 </html>

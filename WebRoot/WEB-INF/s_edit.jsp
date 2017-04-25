@@ -52,7 +52,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <table width="100%"><tr><td width="33%">修改个人信息&nbsp;&nbsp;|&nbsp;&nbsp;欢迎你：${student.name}</td><td width="33%"></td><td width="33%" align="right">今天是：<%=sdf.format(d) %>
 	<a href="/library/login.do?flag=logout">退出</a></td></tr></table>
     <hr>
-    <a href="/library/jumpPage.do?flag=goUser">个人信息</a>&nbsp;&nbsp;&nbsp;<a href="/library/jumpPage.do?flag=goToBookBorrowed">当前借阅情况</a>&nbsp;&nbsp;&nbsp;<a href="/library/jumpPage.do?flag=goEdit">修改个人信息</a><hr>
+    <a href="/library/jumpPage.do?flag=goUser">个人信息</a>&nbsp;&nbsp;&nbsp;<a href="/library/jumpPage.do?flag=goToBookBorrowed">当前借阅情况</a>&nbsp;&nbsp;&nbsp;<a href="/library/jumpPage.do?flag=goEdit">修改个人信息</a>&nbsp;&nbsp;&nbsp;<a href="/library/jumpPage.do?flag=goFindBook">检索图书</a><hr>
     <form name="form" method="post" action="/library/student.do?flag=editInfo" onsubmit="return validate_channel_info(this);">
     	修改密码(不需要修改请留空)<br>
     	新密码：<input type="password" name="psw1"><br>

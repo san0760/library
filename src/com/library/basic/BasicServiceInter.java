@@ -10,4 +10,7 @@ public interface BasicServiceInter
 	public Object findById(Class clazz, Serializable id);
 	public Object uniqueQuery(String hql, Object[] parameters);
 	public void excuteUpdate(String hql, Object[] parameters);
+	public void excuteSQLUpdate(String hql,Object []parameters);
+	public List excuteSQLQuery(String hql,Object []parameters);
+	public List findBlur(String hql,String word);
 }

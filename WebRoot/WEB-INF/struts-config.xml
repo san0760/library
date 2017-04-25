@@ -16,10 +16,12 @@
 			<forward name="go" path="/WEB-INF/bookBorrowed.jsp"></forward>
 			<forward name="goUser" path="/WEB-INF/s-main.jsp"></forward>
 			<forward name="goEdit" path="/WEB-INF/s_edit.jsp"></forward>
+			<forward name="goFindBook" path="/WEB-INF/findBook.jsp"></forward>
 		</action>
 		<action path="/book" parameter="flag" type="com.library.actions.bookAction">
 			<forward name="ok" path="/WEB-INF/success.jsp"></forward>
 			<forward name="err" path="/WEB-INF/fail.jsp"></forward>
+			<forward name="goToFindBook" path="/WEB-INF/findBook.jsp"></forward>
 		</action>
 		<action path="/student" parameter="flag" name="editForm" type="com.library.actions.studentAction">
 			<forward name="ok" path="/WEB-INF/s-main.jsp"></forward>

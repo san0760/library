@@ -49,4 +49,33 @@ public abstract class BasicService implements BasicServiceInter
 		}
 		query.executeUpdate();
 	}
+	public void excuteSQLUpdate(String hql,Object []parameters){
+		Query query=sessionfsFactory.getCurrentSession().createSQLQuery(hql);
+		if(parameters!=null&&parameters.length>0){
+			for(int i=0;i<parameters.length;i++){
+				query.setParameter(i, parameters[i]);
+			}
+		}
+		query.executeUpdate();
+	}
+	@Override
+	public List excuteSQLQuery(String hql, Object[] parameters)
+	{
+		// TODO Auto-generated method stub
+		Query query=sessionfsFactory.getCurrentSession().createSQLQuery(hql);
+		if(parameters!=null&&parameters.length>0){
+			for(int i=0;i<parameters.length;i++){
+				query.setParameter(i, parameters[i]);
+			}
+		}
+		return query.list();
+	}
+	@Override
+	public List findBlur(String hql, String word)
+	{
+		// TODO Auto-generated method stub
+		Query query=sessionfsFactory.getCurrentSession().createQuery(hql);
+		query.setString("name", "%"+word+"%");
+		return query.list();
+	}
 }
